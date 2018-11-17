@@ -26,7 +26,8 @@
   "homepage": "https://github.com/polymer/pwa-helpers#readme",
   "scripts": {
     "test": "tsc && polymer test --module-resolution=node --npm",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "author": "The Polymer Authors"
 }
