@@ -35,6 +35,8 @@ export const updateMetadata = ({
   url,
   image,
   imageAlt,
+  imageWidth,
+  imageHeight,
   twitterCard
 }: {
   title?: string,
@@ -42,6 +44,8 @@ export const updateMetadata = ({
   url?: string,
   image?: string,
   imageAlt?: string,
+  imageWidth?: string,
+  imageHeight?: string,
   twitterCard?: string
 }) => {
   if (title) {
@@ -60,6 +64,14 @@ export const updateMetadata = ({
 
   if (imageAlt) {
     _setMeta('property', 'og:image:alt', imageAlt);
+  }
+
+  if (imageWidth) {
+    _setMeta('property', 'og:image:width', imageWidth);
+  }
+
+  if (imageHeight) {
+    _setMeta('property', 'og:image:height', imageHeight);
   }
 
   if (twitterCard) {
